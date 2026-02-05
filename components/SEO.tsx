@@ -10,11 +10,11 @@ const SEO: React.FC<SEOProps> = ({ post }) => {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "TechPulse",
-    "url": "https://techpulse-blog.vercel.app/",
+    "url": "https://techpulse-blog-flax.vercel.app/",
     "description": "Explore expert insights on modern software engineering, scalable architecture, and the latest tech trends.",
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://techpulse-blog.vercel.app/?q={search_term_string}",
+      "target": "https://techpulse-blog-flax.vercel.app/?q={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   };
@@ -36,7 +36,7 @@ const SEO: React.FC<SEOProps> = ({ post }) => {
       "name": "TechPulse",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://techpulse-blog.vercel.app/logo.png"
+        "url": "https://techpulse-blog-flax.vercel.app/logo.png"
       }
     }
   } : null;

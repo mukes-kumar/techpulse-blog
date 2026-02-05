@@ -3,7 +3,7 @@
 TechPulse is a high-performance, SEO-optimized tech blog built with React, TypeScript, and Tailwind CSS.
 
 ## 🚀 Live Demo
-[https://techpulse-blog.vercel.app/](https://techpulse-blog.vercel.app/)
+[https://techpulse-blog-flax.vercel.app/](https://techpulse-blog-flax.vercel.app/)
 
 ## 🔍 SEO Strategy Implementation
 

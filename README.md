@@ -13,6 +13,8 @@ TechPulse is a high-performance, SEO-optimized tech blog built with React, TypeS
 
 ## This Searching & Blogs Preview with details Model Preview blogs 
 <img width="795" height="819" alt="image" src="https://github.com/user-attachments/assets/62836edf-f882-4ad4-a749-0d220f85828d" />
+### articals details model 
+<img width="1228" height="782" alt="image" src="https://github.com/user-attachments/assets/3ee4e535-79ef-4360-ad8f-a71b49345523" />
 
 ## Footer preview 
 <img width="1181" height="828" alt="image" src="https://github.com/user-attachments/assets/07a3b8ac-f848-4d05-86c6-7031ecbd4f7a" />

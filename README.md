@@ -5,6 +5,19 @@ TechPulse is a high-performance, SEO-optimized tech blog built with React, TypeS
 ## 🚀 Live Demo
 [https://techpulse-blog-flax.vercel.app/](https://techpulse-blog-flax.vercel.app/)
 
+## First API calling time page loader preview 
+<img width="1419" height="812" alt="image" src="https://github.com/user-attachments/assets/b45ae386-26b9-4b40-9749-4f660d3fe7fd" />
+
+## This Header and Hero Preview 
+<img width="794" height="392" alt="image" src="https://github.com/user-attachments/assets/f11d2715-4cac-4cfd-94d5-93faa2464283" />
+
+## This Searching & Blogs Preview with details Model Preview blogs 
+<img width="795" height="819" alt="image" src="https://github.com/user-attachments/assets/62836edf-f882-4ad4-a749-0d220f85828d" />
+
+## Footer preview 
+<img width="1181" height="828" alt="image" src="https://github.com/user-attachments/assets/07a3b8ac-f848-4d05-86c6-7031ecbd4f7a" />
+
+
 ## 🔍 SEO Strategy Implementation
 
 ### 1. Meta Tags & Open Graph

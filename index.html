@@ -1,70 +1,89 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- Primary Meta Tags -->
-    <title>TechPulse | Insights for Modern Developers</title>
-    <meta name="title" content="TechPulse | Insights for Modern Developers" />
-    <meta name="description" content="Explore the latest in technology, web development, and software engineering with TechPulse's curated articles." />
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://techpulse-blog.vercel.app/" />
-    <meta property="og:title" content="TechPulse | Insights for Modern Developers" />
-    <meta property="og:description" content="Explore the latest in technology, web development, and software engineering with TechPulse's curated articles." />
-    <meta property="og:image" content="https://picsum.photos/seed/techpulse/1200/630" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://techpulse-blog.vercel.app/" />
-    <meta property="twitter:title" content="TechPulse | Insights for Modern Developers" />
-    <meta property="twitter:description" content="Explore the latest in technology, web development, and software engineering with TechPulse's curated articles." />
-    <meta property="twitter:image" content="https://picsum.photos/seed/techpulse/1200/630" />
+  <!-- Favicon -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2225%22 fill=%22%230284c7%22/><text y=%22.9em%22 x=%22.15em%22 font-size=%2270%22 font-family=%22Inter, sans-serif%22 font-weight=%22800%22 fill=%22white%22>T</text></svg>">
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              brand: {
-                50: '#f0f9ff',
-                100: '#e0f2fe',
-                200: '#bae6fd',
-                300: '#7dd3fc',
-                400: '#38bdf8',
-                500: '#0ea5e9',
-                600: '#0284c7',
-                700: '#0369a1',
-                800: '#075985',
-                900: '#0c4a6e',
-              },
+  <!-- Primary Meta Tags -->
+  <title>TechPulse | Leading Tech Blog for Software Engineers</title>
+  <meta name="title" content="TechPulse | Leading Tech Blog for Software Engineers" />
+  <meta name="description"
+    content="Explore expert insights on modern software engineering, scalable architecture, and the latest tech trends. Stay ahead with TechPulse." />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://techpulse-blog.vercel.app/" />
+  <meta property="og:title" content="TechPulse | Leading Tech Blog for Software Engineers" />
+  <meta property="og:description"
+    content="Explore expert insights on modern software engineering, scalable architecture, and the latest tech trends. Stay ahead with TechPulse." />
+  <meta property="og:image" content="https://picsum.photos/seed/techpulse/1200/630" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://techpulse-blog.vercel.app/" />
+  <meta property="twitter:title" content="TechPulse | Leading Tech Blog for Software Engineers" />
+  <meta property="twitter:description"
+    content="Explore expert insights on modern software engineering, scalable architecture, and the latest tech trends. Stay ahead with TechPulse." />
+  <meta property="twitter:image" content="https://picsum.photos/seed/techpulse/1200/630" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              200: '#bae6fd',
+              300: '#7dd3fc',
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+              800: '#075985',
+              900: '#0c4a6e',
             },
           },
         },
-      }
-    </script>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-      body {
-        font-family: 'Inter', sans-serif;
-      }
-      .line-clamp-2 {
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-      }
-      .line-clamp-3 {
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-      }
-    </style>
+      },
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    .line-clamp-2 {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      line-clamp: 2;
+      overflow: hidden;
+    }
+
+    .line-clamp-3 {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      line-clamp: 3;
+      overflow: hidden;
+    }
+
+    .text-gradient {
+      background: linear-gradient(to right, #0284c7, #38bdf8);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
   <script type="importmap">
 {
   "imports": {
@@ -74,10 +93,12 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
+  <link rel="stylesheet" href="/index.css">
 </head>
-  <body class="bg-gray-50 text-gray-900 overflow-x-hidden">
-    <div id="root"></div>
+
+<body class="bg-gray-50 text-gray-900 overflow-x-hidden selection:bg-brand-100 selection:text-brand-900">
+  <div id="root"></div>
   <script type="module" src="/index.tsx"></script>
 </body>
+
 </html>

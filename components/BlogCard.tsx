@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { BlogPost } from '../types';
 
@@ -14,15 +13,26 @@ const BlogCard: React.FC<BlogCardProps> = ({ post, onClick }) => {
     year: 'numeric',
   });
 
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      onClick(post);
+    }
+  };
+
   return (
     <article 
-      className="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col cursor-pointer"
+      className="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl focus-within:ring-2 focus-within:ring-brand-500 transition-all duration-300 overflow-hidden flex flex-col cursor-pointer outline-none"
       onClick={() => onClick(post)}
+      onKeyDown={handleKeyDown}
+      tabIndex={0}
+      role="button"
+      aria-label={`Read article: ${post.title}`}
     >
-      <div className="relative h-56 w-full overflow-hidden">
+      <div className="relative h-56 w-full overflow-hidden bg-gray-100">
         <img
           src={post.photo_url || `https://picsum.photos/seed/${post.id}/600/400`}
-          alt={post.title}
+          alt={`Featured image for the tech article: ${post.title}`}
           loading="lazy"
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         />

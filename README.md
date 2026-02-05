@@ -1,64 +1,40 @@
-
 # TechPulse Blog - Frontend Technical Assessment
 
-TechPulse is a high-performance, SEO-optimized tech blog built with React, TypeScript, and Tailwind CSS. This project demonstrates best practices in modern web development, accessibility, and search engine optimization.
+TechPulse is a high-performance, SEO-optimized tech blog built with React, TypeScript, and Tailwind CSS.
 
 ## 🚀 Live Demo
 [https://techpulse-blog.vercel.app/](https://techpulse-blog.vercel.app/)
 
-## 🛠 Technologies Used
-- **Framework:** React 18+ (SPA with SEO management)
-- **Language:** TypeScript
-- **Styling:** Tailwind CSS (Mobile-first approach)
-- **Icons/Graphics:** SVG, Heroicons
-- **Image Hosting:** Picsum Photos (placeholder fallback)
-- **API:** Custom Blogs API
-
-## 🔍 Search and Filter Implementation
-The application uses a unified filtering logic implemented with React's `useMemo` hook for optimal performance.
-- **Combined Logic:** Search and category filters work together. You can search within a specific category or across all categories.
-- **Search Depth:** The search query is matched against the `title`, `description`, AND `content_text` of each blog post to ensure comprehensive results.
-- **Dynamic Categories:** Categories are derived dynamically from the unique categories present in the fetched data.
-
-## 🛡 SEO Strategy
+## 🔍 SEO Strategy Implementation
 
 ### 1. Meta Tags & Open Graph
-- Implemented comprehensive meta tags in `index.html` including `<title>`, `<meta description>`, and Open Graph (`og:`) tags.
-- Twitter Cards are configured to ensure rich media previews when links are shared on social platforms.
-- Strategic use of a 160-character description for optimal search engine snippet display.
+- **Title Tags:** Optimized to < 60 characters for maximum CTR.
+- **Descriptions:** Precisely under 160 characters to ensure full visibility in SERPs.
+- **Rich Previews:** Full Open Graph and Twitter Card support for social sharing.
 
-### 2. Semantic HTML
-- Used HTML5 semantic tags strictly:
-  - `<header>` for navigation.
-  - `<main>` for the primary page content.
-  - `<article>` for each blog post in the grid.
-  - `<section>` for logical grouping (Hero, Filters, Blog List).
-  - `<footer>` for site-wide information.
-  - `<time>` tags for formatted dates to assist search crawlers.
-  - **Heading Hierarchy:** One `<h1>` per page, followed by sequential `<h2>` and `<h3>` tags.
+### 2. Semantic HTML & Structure
+- **Heading Hierarchy:** Strictly one `<h1>` per page. `<h2>` used for the article grid and section headers. `<h3>` used for footer sections and modal sub-headings.
+- **HTML5 Tags:** Systematic use of `<header>`, `<nav>`, `<main>`, `<article>`, `<section>`, `<footer>`, and `<time>`.
 
 ### 3. Structured Data (JSON-LD)
-- Integrated `WebSite` schema to provide search engines with site-wide context.
-- Prepared for `Article` schema integration within the modal/post view to improve Rich Results visibility.
+- **WebSite Schema:** Site-wide schema on the homepage for sitelink search box eligibility.
+- **Article Schema:** Dynamic injection of Article structured data when an article modal is opened, including `headline`, `author`, `publisher`, and `datePublished`.
 
-### 4. Image Optimization
-- All images use `loading="lazy"` to improve initial page load performance.
-- Descriptive `alt` text is provided for every image based on the post title.
-- Used responsive image containers with `object-cover` to ensure visual consistency across devices.
+### 4. Technical SEO
+- **Robots.txt:** Configured to allow full indexing and point to the sitemap.
+- **Sitemap.xml:** Provided for efficient search engine crawling.
+- **Image Optimization:** Strict descriptive `alt` text for every image and `loading="lazy"` on all cards to boost performance scores.
 
-### 5. Performance Optimizations
-- **Mobile-First Design:** Optimized layouts for mobile before scaling up to tablet and desktop.
-- **Memoization:** Utilized `useMemo` to prevent expensive re-computations of filter logic on every render.
-- **Loading States:** Implemented skeleton-like pulse animations to improve perceived performance during data fetching.
+## ♿ Accessibility (WCAG AA)
+- **Keyboard Navigation:** 
+  - `ESC` to close modals.
+  - `TAB` and `ENTER/SPACE` support for all article cards.
+  - Visible focus states for interactive elements.
+- **Color Contrast:** High-contrast color palette (Brand Blue 600 vs White) ensures readability.
+- **Screen Readers:** Semantic labels and `sr-only` headings provided for non-visual navigation.
 
-## ♿ Accessibility & UX
-- **Keyboard Navigation:** Full support for `ESC` key to close modals, and `TAB` navigation for interactive elements.
-- **Contrast:** Colors meet WCAG AA standards with a focus on legibility (Dark text on light background).
-- **Responsive Grid:** 1 column (Mobile), 2 columns (Tablet), 3 columns (Desktop).
-- **State Management:** Handles "No Results" and "API Error" states gracefully with actionable buttons.
-
-## 📊 Lighthouse Scores (Targets)
-- **Performance:** 90+
-- **SEO:** 95+
-- **Accessibility:** 85+
-- **Best Practices:** 90+
+## 📊 Lighthouse Target Scores
+- Performance: 90+
+- Accessibility: 85+ (Aiming for 100)
+- Best Practices: 90+
+- SEO: 100

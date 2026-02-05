@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useMemo } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -23,7 +22,7 @@ const App: React.FC = () => {
       try {
         setLoading(true);
         const data = await fetchBlogs();
-        // The brief asks for exactly 10 posts
+        // Brief requires exactly 10 posts
         setBlogs(data.blogs.slice(0, 10));
         setError(null);
       } catch (err) {
@@ -53,32 +52,43 @@ const App: React.FC = () => {
     });
   }, [blogs, searchQuery, activeCategory]);
 
+  const handleHeroTagClick = (tag: string) => {
+    setSearchQuery(tag);
+    // Smooth scroll to filters/articles section
+    const filterSection = document.getElementById('filters-section');
+    filterSection?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
-      <SEO />
+      <SEO post={selectedPost} />
       <Header />
       
-      <main className="flex-grow">
-        <Hero />
+      <main id="main-content" className="flex-grow">
+        <Hero onTagClick={handleHeroTagClick} />
         
-        <Filters 
-          categories={categories}
-          activeCategory={activeCategory}
-          setActiveCategory={setActiveCategory}
-          searchQuery={searchQuery}
-          setSearchQuery={setSearchQuery}
-          resultsCount={filteredBlogs.length}
-        />
+        <div id="filters-section">
+          <Filters 
+            categories={categories}
+            activeCategory={activeCategory}
+            setActiveCategory={setActiveCategory}
+            searchQuery={searchQuery}
+            setSearchQuery={setSearchQuery}
+            resultsCount={filteredBlogs.length}
+          />
+        </div>
 
-        <section className="container mx-auto px-4 py-12">
+        <section className="container mx-auto px-4 py-12" aria-labelledby="articles-heading">
+          <h2 id="articles-heading" className="sr-only">Latest Tech Articles</h2>
+          
           {loading ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-pulse">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-pulse" aria-hidden="true">
               {[...Array(6)].map((_, i) => (
                 <div key={i} className="bg-white rounded-2xl h-96 border border-gray-100"></div>
               ))}
             </div>
           ) : error ? (
-            <div className="flex flex-col items-center justify-center py-24 text-center">
+            <div className="flex flex-col items-center justify-center py-24 text-center" role="alert">
               <div className="bg-red-50 p-6 rounded-2xl mb-6">
                 <svg className="w-12 h-12 text-red-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />

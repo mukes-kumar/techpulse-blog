@@ -90,7 +90,7 @@ const App: React.FC = () => {
                 />
               </div>
 
-              <section className="container mx-auto px-4 py-12" aria-labelledby="articles-heading">
+              <section id="articles" className="container mx-auto px-4 py-12" aria-labelledby="articles-heading">
                 <h2 id="articles-heading" className="sr-only">Latest Tech Articles</h2>
 
                 {error ? (
